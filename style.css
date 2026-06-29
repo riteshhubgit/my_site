@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My DevOps Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>🚀 Tumhara Naam</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Hi, I'm <span>Tumhara Naam</span></h2>
+            <h3>Aspiring DevOps Engineer</h3>
+            <p>Passionate about CI/CD, Cloud, Docker & Kubernetes</p>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a fresher DevOps enthusiast with hands-on experience 
+            in CI/CD pipelines, containerization with Docker, 
+            cloud deployment on AWS, and infrastructure automation 
+            using Terraform and Ansible.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>🛠️ Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">🐳 Docker</div>
+            <div class="skill-card">☸️ Kubernetes</div>
+            <div class="skill-card">☁️ AWS</div>
+            <div class="skill-card">🔧 Jenkins</div>
+            <div class="skill-card">📝 Terraform</div>
+            <div class="skill-card">🔴 Ansible</div>
+            <div class="skill-card">🐙 GitHub Actions</div>
+            <div class="skill-card">🐧 Linux</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>📁 Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>🚀 CI/CD Pipeline</h3>
+                <p>Automated deployment using GitHub Actions & AWS S3</p>
+                <p class="tech">GitHub Actions | AWS S3 | CloudFront</p>
+                <a href="https://github.com/tumhara-username" 
+                   target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🐳 Docker Microservices</h3>
+                <p>Containerized MERN app with Docker Compose</p>
+                <p class="tech">Docker | Docker Compose | Node.js</p>
+                <a href="https://github.com/tumhara-username" 
+                   target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>☁️ AWS Infrastructure</h3>
+                <p>Automated AWS setup using Terraform IaC</p>
+                <p class="tech">Terraform | AWS | VPC | EC2</p>
+                <a href="https://github.com/tumhara-username" 
+                   target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>📧 Contact Me</h2>
+        <div class="contact-links">
+            <a href="mailto:tumhara@email.com">📧 Email</a>
+            <a href="https://linkedin.com/in/username">💼 LinkedIn</a>
+            <a href="https://github.com/username">🐙 GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Tumhara Naam | DevOps Portfolio</p>
+        <p>🚀 Deployed automatically via GitHub Actions → AWS S3</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
