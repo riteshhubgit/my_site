@@ -1,0 +1,41 @@
+name: Deploy Portfolio to AWS S3
+
+# Kab run hoga?
+on:
+  push:
+    branches:
+      - main  # Jab bhi main branch pe push hoga
+
+jobs:
+  deploy:
+    name: Deploy to S3
+    runs-on: ubuntu-latest  # GitHub ka server use karega
+
+    steps:
+      # Step 1: Code download karo
+      - name: ⬇️ Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: AWS configure karo
+      - name: ☁️ Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      # Step 3: S3 pe upload karo
+      - name: 🚀 Deploy to S3
+        run: |
+          aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} \
+          --exclude ".git/*" \
+          --exclude ".github/*" \
+          --delete
+
+      # Step 4: Success message
+      - name: ✅ Deployment Complete
+        run: |
+          echo "======================================"
+          echo "✅ Website Successfully Deployed!"
+          echo "🌐 URL: http://${{ secrets.AWS_S3_BUCKET }}.s3-website.ap-south-1.amazonaws.com"
+          echo "======================================"
